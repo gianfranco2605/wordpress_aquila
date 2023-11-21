@@ -6,7 +6,14 @@
 */
 ?>
 
-    <footer>Footer</footer>
-    <?php wp_footer(); ?>
+            <footer>Footer</footer>
+
+        </div>
+        
+    </div>
+
+<?php wp_footer(); ?>
+
 </body>
+
 </html>
