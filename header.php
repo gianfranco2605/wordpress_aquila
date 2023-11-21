@@ -17,5 +17,17 @@
 <!-- body class functions insert classes to the body -->
 <body <?php body_class("my-custom-class-inside-body-tag"); ?>>
     <!-- function to insert functions after the body tag open -->
-<?php wp_body_open() ?>    
-    <header>Header</header>
+<?php
+if( function_exists( 'wp_body_open' )) {
+    wp_body_open();
+} 
+?>    
+
+    <div class="site" id="page">
+
+        <header id="mastheader" class="site-header" role="banner">   
+            <?php get_template_part( 'templates/header/navbar' ); ?>
+        </header>
+
+        <div id="content" class="site-content">
+    
