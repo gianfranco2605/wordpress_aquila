@@ -6,19 +6,29 @@
  * @packge Aquila
 */
 
-if( ! defined( 'AQUILA_DIR' ) ) {
+use AQUILA_THEME\Inc\AQUILA_THEME;
 
+if( ! defined( 'AQUILA_DIR_PATH' ) ) {
+    // untrailingslashit remove the slash to ensures uniformity
     define( 'AQUILA_DIR_PATH', untrailingslashit( get_template_directory() ) );
 }
 
 require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
+
+function aquila_get_theme_instance() {
+
+    \AQUILA_THEME\Inc\AQUILA_THEME::get_instance();
+
+}
+
+aquila_get_theme_instance();
 
 // style scripts
 function aquila_enqueue_scripts() {
  
     // filemtime() is a function for versions in file changes
     // Enqueue Styles
-    wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
+    wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), [], filemtime( AQUILA_DIR_PATH . '/style.css' ), 'all' );
 
     wp_enqueue_style( 'bootstrap-css' , get_template_directory_uri() . '/assets/src/library/css/bootstrap.min.css', [], false, 'all' );
 
