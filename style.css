@@ -20,3 +20,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.custom-logo {
+  width: 80px;
+  height: 80px;
+}

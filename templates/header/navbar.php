@@ -4,10 +4,24 @@
  * 
  * @package Aquila
 */
+$menu_class = \Aquila_Theme\Inc\Menus::get_instance();
+$header_menu_id = $menu_class->get_menu_id( 'aquila-header-menu' );
+
+$header_menus = wp_get_nav_menu_items( $header_menu_id );
+
+echo '<pre>';
+print_r( $header_menus );
+wp_die();
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">
+    
+    <?php
+      if( function_exists( 'the_custom_logo' ) ) {
+        the_custom_logo();
+      }
+     ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,3 +55,9 @@
     </form>
   </div>
 </nav>
+<?php
+// wp_nav_menu( [
+//   'theme_location'  => 'aquila-header-menu',
+//   'container_class' => 'my_extra_menu_class',
+// ] );
+// 

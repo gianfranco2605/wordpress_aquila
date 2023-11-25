@@ -19,7 +19,7 @@ trait Singleton {
 
     final public static function get_instance() {
 
-        static $intance = [];
+        static $instance = [];
 
         $called_class = get_called_class();
 
