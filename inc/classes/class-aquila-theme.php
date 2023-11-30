@@ -17,6 +17,7 @@ class AQUILA_THEME {
         // //load class
         Assets::get_instance();
         Menus::get_instance();
+        Meta_Boxes::get_instance();
         $this->setup_hooks();
 
     }
@@ -73,6 +74,9 @@ class AQUILA_THEME {
 
         // add options in the backend block gutenber wide-width and full-width
         add_theme_support( 'align-wide' );
+
+        // Register images sizes
+        add_image_size( 'feature-thumbnail', 350, 233, true ); // true-> crop image
 
         // width in front end
         global $content_width;
