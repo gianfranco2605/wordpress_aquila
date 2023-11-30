@@ -14,7 +14,7 @@ get_header();
     <main id="main" class="site-main mt-5" role="main">
 
     <?php
-        if ( have_posts() ) {
+        if ( have_posts() ) :
 
             ?>
             
@@ -57,10 +57,12 @@ get_header();
                         ?>
 
                         <div class="col-lg-4 col-md-6 col-sm-12">
+                            
+                        <?php
 
-                        <h3><?php the_title(); ?></h3>
+                            get_template_part( 'templates/content' );
 
-                            <p><?php the_excerpt(); ?></p>
+                        ?>    
 
                         </div>
                            
@@ -87,7 +89,13 @@ get_header();
 
             <?php
 
-        }
+        else : 
+            
+            get_template_part( 'templates/content-none' );
+
+        endif;
+
+        get_template_part( 'templates/content-none' );
 
     ?>
 
