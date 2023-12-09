@@ -32,3 +32,13 @@ img {
   height: 200px;
   object-fit: cover;
 }
+
+/*Wntry Meta*/
+.updated:not(.published) {
+  display: none;
+}
+
+/* NAV SUB-ITEM SHOW ON HOVER */
+.nav-item:hover .dropdown-menu:not(.show) {
+  display: block;
+}
