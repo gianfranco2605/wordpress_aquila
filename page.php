@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-    <div>Single Page</div>
+    <div> Page</div>
 
 <?php
 
