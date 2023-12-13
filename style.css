@@ -33,7 +33,7 @@ img {
   object-fit: cover;
 }
 
-/*Wntry Meta*/
+/*Entry Meta*/
 .updated:not(.published) {
   display: none;
 }

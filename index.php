@@ -92,11 +92,14 @@ get_header();
         else : 
             
             get_template_part( 'templates/content-none' );
+            
 
         endif;
+        
+        
 
         get_template_part( 'templates/content-none' );
-
+        // aquila_pagination(); Not working deprecated??
     ?>
 
     </main>

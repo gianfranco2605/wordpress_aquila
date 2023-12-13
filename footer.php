@@ -6,7 +6,20 @@
 */
 ?>
 
-            <footer>Footer</footer>
+            <footer class="bg-info p-3">
+                
+                <div class="container ">
+
+                    <?php
+                        if ( is_active_sidebar( 'sidebar-2' ) ) {
+
+                            dynamic_sidebar( 'sidebar-2' );
+                        }
+                    ?>
+
+                </div>
+
+            </footer>
 
         </div>
         

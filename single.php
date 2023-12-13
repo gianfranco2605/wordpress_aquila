@@ -6,76 +6,65 @@
 */
 
 get_header();
-
 ?>
 
 <div id="primary">
 
     <main id="main" class="site-main mt-5" role="main">
 
-    <?php
-        if ( have_posts() ) :
+        <div class="container">
 
-            ?>
-            
-            <div class="container">
+            <div class="row">
 
-                <?php
-                    // check if i'm in the homepage but not in the front-page
-                    if( is_home() && ! is_front_page() ) {
+                <div class="col-lg-8 col-md-8 col-sm-12">
 
-                        ?>
+                    <?php
 
-                        <header class="mb-5">
-
-                            <h1 class="page-title">
-
-                                <?php single_post_title(); ?>
-
-                            </h1>
-
-                        </header>
-
-                        <?php
-                    }
-
-                    while ( have_posts() ) : the_post();
-
-
-                            get_template_part( 'templates/content' );
-
-                        ?>    
-
-                        </div>
-
-
-                            </div>
-
-                            <?php
-
-                    endwhile;
-
+                    if ( have_posts() ) :
+                        if( is_home() && ! is_front_page() ) :
                     ?>
+                        <header class="mb-5">
+                            <h1 class="page-title">
+                                <?php single_post_title(); ?>
+                            </h1>
+                        </header>
+                    <?php
+
+                        endif;
+
+                        while ( have_posts() ) : the_post();
+                            get_template_part( 'templates/content' );
+                        endwhile;
+
+                    endif; // End have_posts()
+                    ?>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <!-- getting the template sidebar.php -->
+                    <?php get_sidebar();?>
+                </div>
 
             </div>
 
-            <?php
-
-        else : 
-            
-        get_template_part( 'templates/content-none' );
-
-        endif;
-
-        get_template_part( 'templates/content-none' );
-
-    ?>
+        </div>
 
     </main>
+
+    <div class="container">
+
+        <?php
+            previous_post_link();
+            next_post_link();
+            get_template_part( 'templates/content-none' );
+        ?>
+
+    </div>
 
 </div>
 
 <?php
 
-get_footer(); 
+get_footer();
 
+?>

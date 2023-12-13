@@ -9,7 +9,7 @@ namespace AQUILA_THEME\Inc;
 use AQUILA_THEME\Inc\Traits\Singleton;
 
 class Meta_Boxes  {
-    // Singleton to insure just one intance
+    // Singleton to insure just one instance
     use Singleton;
 
     protected function __construct() {
@@ -50,7 +50,7 @@ class Meta_Boxes  {
         $value = get_post_meta( $post->ID, '_hide_page_title', true );
 
         /**
-         * Use nonce for form verifycation
+         * Use nonce for form verification
         */
         wp_nonce_field( plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name' );
 
