@@ -9,7 +9,7 @@ namespace AQUILA_THEME\Inc;
 use AQUILA_THEME\Inc\Traits\Singleton;
 
 class Assets  {
-    // Singleton to insure just one intance
+    // Singleton to insure just one instance
     use Singleton;
 
     protected function __construct() {

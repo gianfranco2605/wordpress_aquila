@@ -9,7 +9,7 @@ namespace AQUILA_THEME\Inc;
 use AQUILA_THEME\Inc\Traits\Singleton;
 
 class Menus {
-    // trait-singleton fie to insure not to instance double classes
+    // trait-singleton file to insure not to instance double classes
     use Singleton;
 
     protected function __construct() {
