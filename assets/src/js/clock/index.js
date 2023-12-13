@@ -42,5 +42,3 @@
 
   new Clock();
 })(jQuery);
-
-console.log("hgellos");
