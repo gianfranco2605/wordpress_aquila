@@ -1,0 +1,17 @@
+{
+  "name": "aquila",
+  "version": "1.0.0",
+  "description": "aquila theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gianfranco Navas Fernandini",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.50.0",
+    "sass-loader": "13.3.2",
+    "sass-mq": "5.0.1"
+  }
+}

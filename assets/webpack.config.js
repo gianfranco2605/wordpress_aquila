@@ -28,10 +28,31 @@ const rules = [
   {
     test: /\.scss$/,
     exclude: /node_modules/,
-    use: [MiniCssExtractPlugin.loader, "css-loader"], //.loader GPT advice
+    use: [
+      MiniCssExtractPlugin.loader,
+      "css-loader",
+      {
+        loader: "sass-loader",
+        options: {
+          implementation: require("sass"),
+        },
+      },
+    ], //.loader GPT advice
   },
   {
     test: /\.(png|jpg|svg|jpeg|gif|ico)$/,
+    use: [
+      {
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+          publicPath: "production" === process.env.NODE_ENV ? "../" : "../../",
+        },
+      },
+    ],
+  },
+  {
+    test: /\.(woff2?|ttf|eot|otf)$/,
     use: [
       {
         loader: "file-loader",
