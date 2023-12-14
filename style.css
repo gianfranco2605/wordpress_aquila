@@ -15,30 +15,3 @@ Text Domain: aquila
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-
-#page {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.custom-logo {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/*Entry Meta*/
-.updated:not(.published) {
-  display: none;
-}
-
-/* NAV SUB-ITEM SHOW ON HOVER */
-.nav-item:hover .dropdown-menu:not(.show) {
-  display: block;
-}
