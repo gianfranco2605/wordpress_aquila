@@ -55,8 +55,6 @@ class AQUILA_THEME {
         // for posts
         add_theme_support( 'automatic-feed-links' );
 
-        add_theme_support( 'automatic-feed-links' );
-
         // for valid html
         add_theme_support( 'html5', [
             'search-form',
@@ -67,14 +65,16 @@ class AQUILA_THEME {
             'style',
         ] );
 
-        // for dynamite editor
-        add_editor_style();
-
-        // gutenberg
+        // gutenberg-styles
         add_theme_support( 'wp-block-styles' );
 
         // add options in the backend block gutenber wide-width and full-width
         add_theme_support( 'align-wide' );
+
+        add_theme_support( 'editor-styles' );
+
+          // for dynamite editor
+        add_editor_style('assets/build/css/editor.css');
 
         // Register images sizes
         add_image_size( 'feature-thumbnail', 350, 233, true ); // true-> crop image
@@ -84,9 +84,6 @@ class AQUILA_THEME {
         if ( ! isset( $content_width ) ) {
             $content_width = 1240;
         }
-
-
-
 
     }
 

@@ -34,7 +34,7 @@ class Assets  {
     // sass 
     wp_enqueue_style( 'main-css', AQUILA_BUILD_CSS_URI . '/main.css', ['bootstrap-css'], filemtime( AQUILA_BUILD_CSS_DIR_PATH . '/main.css' ), 'all' );
     
-    }
+}
 
     public function register_scripts() {
         // Enqueue Scripts
