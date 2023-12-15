@@ -76,6 +76,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/img/patterns/luk-fra.jpeg":
+/*!***************************************!*\
+  !*** ./src/img/patterns/luk-fra.jpeg ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("../../src/img/patterns/luk-fra.jpeg");
+
+/***/ }),
+
 /***/ "./src/sass/main.scss":
 /*!****************************!*\
   !*** ./src/sass/main.scss ***!
@@ -169,12 +181,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clock__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_clock__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/main.scss */ "./src/sass/main.scss");
 /* harmony import */ var _img_gelato1_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/gelato1.png */ "./src/img/gelato1.png");
+/* harmony import */ var _img_patterns_luk_fra_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/patterns/luk-fra.jpeg */ "./src/img/patterns/luk-fra.jpeg");
 
 
 // Styles
 
 
 //Images
+
 
 }();
 /******/ })()
