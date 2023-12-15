@@ -19,6 +19,8 @@ class AQUILA_THEME {
         Menus::get_instance();
         Meta_Boxes::get_instance();
         Sidebars::get_instance();
+        Block_Patterns::get_instance();
+
         $this->setup_hooks();
 
     }
@@ -78,6 +80,9 @@ class AQUILA_THEME {
 
         // Register images sizes
         add_image_size( 'feature-thumbnail', 350, 233, true ); // true-> crop image
+
+        // remove the core block patterns 
+        remove_theme_support( 'core-block-patterns' );
 
         // width in front end
         global $content_width;
