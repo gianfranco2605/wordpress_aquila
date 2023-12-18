@@ -33,7 +33,9 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       key: "numPad",
       value: function numPad(str) {
         var cStr = str.toString();
-        if (cStr.length < 2) str = 0 + cStr;
+        if (2 > cStr.length) {
+          str = 0 + cStr;
+        }
         return str;
       }
     }, {
@@ -43,12 +45,12 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         var currSec = currDate.getSeconds();
         var currMin = currDate.getMinutes();
         var curr24Hr = currDate.getHours();
-        var ampm = curr24Hr >= 12 ? "pm" : "am";
+        var ampm = 12 <= curr24Hr ? "pm" : "am";
         var currHr = curr24Hr % 12;
         currHr = currHr ? currHr : 12;
         var stringTime = currHr + ":" + this.numPad(currMin) + ":" + this.numPad(currSec);
         var timeEmojiEl = $("#time-emoji");
-        if (curr24Hr >= 5 && curr24Hr <= 17) {
+        if (5 <= curr24Hr && 17 >= curr24Hr) {
           timeEmojiEl.text("🌞");
         } else {
           timeEmojiEl.text("🌜");
