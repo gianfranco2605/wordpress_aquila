@@ -24,6 +24,11 @@ if( ! defined( 'AQUILA_BUILD_URI' ) ) {
     define( 'AQUILA_BUILD_URI', untrailingslashit( get_template_directory_uri() . '/assets/build' ) );
 }
 
+if( ! defined( 'AQUILA_BUILD_PATH' ) ) {
+    // untrailingslashit remove the slash to ensures uniformity
+    define( 'AQUILA_BUILD_PATH', untrailingslashit( get_template_directory() . '/assets/build' ) );
+}
+
 if( ! defined( 'AQUILA_BUILD_JS_URI' ) ) {
     // untrailingslashit remove the slash to ensures uniformity
     define( 'AQUILA_BUILD_JS_URI', untrailingslashit( get_template_directory_uri() . '/assets/build/js' ) );
@@ -47,6 +52,10 @@ if( ! defined( 'AQUILA_BUILD_CSS_URI' ) ) {
 if( ! defined( 'AQUILA_BUILD_CSS_DIR_PATH' ) ) {
     // untrailingslashit remove the slash to ensures uniformity
     define( 'AQUILA_BUILD_CSS_DIR_PATH', untrailingslashit( get_template_directory() . '/assets/build/css' ) );
+}
+
+if ( ! defined( 'AQUILA_BUILD_LIB_URI' ) ) {
+	define( 'AQUILA_BUILD_LIB_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/library' );
 }
 
 require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
