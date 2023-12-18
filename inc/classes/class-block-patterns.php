@@ -1,6 +1,6 @@
 <?php
 /**
- * Blcok Patterns
+ * Block Patterns
  * 
  * @package Aquila
 */
