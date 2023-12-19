@@ -1,6 +1,59 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/gutenberg/block-extension/register-block-styles.js":
+/*!*******************************************************************!*\
+  !*** ./src/js/gutenberg/block-extension/register-block-styles.js ***!
+  \*******************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * Register Block Styles
+ *
+ */
+
+
+
+
+// Quote Block Styles
+var layoutStyleQuote = [{
+  name: "layout-dark-background",
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Layout style dark background", "aquila")
+}];
+var layoutStyleButton = [{
+  name: "layout-border-blue-fill",
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Blue outline", "aquila")
+}, {
+  name: "layout-border-white-no-fill",
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("White outline - to be use with dark background", "aquila")
+}];
+var register = function register() {
+  // Register style for Quote block
+  (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockStyle)("core/quote", layoutStyleQuote);
+  layoutStyleButton.forEach(function (layoutStyle) {
+    return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockStyle)("core/button", layoutStyle);
+  });
+};
+
+// unregister styles
+var deregister = function deregister() {
+  (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.unregisterBlockStyle)(blockname = "core/quote", styleVariationName = "large");
+};
+
+// Register style on dom ready
+wp.domReady(function () {
+  register();
+  deregister();
+});
+
+/***/ }),
+
 /***/ "./src/js/gutenberg/blocks/dos-and-donts/edit.js":
 /*!*******************************************************!*\
   !*** ./src/js/gutenberg/blocks/dos-and-donts/edit.js ***!
@@ -1811,10 +1864,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_blocks_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/blocks.scss */ "./src/sass/blocks.scss");
 /* harmony import */ var _gutenberg_blocks_heading_with_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gutenberg/blocks/heading-with-icon */ "./src/js/gutenberg/blocks/heading-with-icon/index.js");
 /* harmony import */ var _gutenberg_blocks_dos_and_donts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gutenberg/blocks/dos-and-donts */ "./src/js/gutenberg/blocks/dos-and-donts/index.js");
+/* harmony import */ var _gutenberg_block_extension_register_block_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gutenberg/block-extension/register-block-styles */ "./src/js/gutenberg/block-extension/register-block-styles.js");
 
 
 //Blocks
 
+
+
+// Blocks extensions
 
 }();
 /******/ })()
