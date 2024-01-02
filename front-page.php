@@ -33,7 +33,9 @@ get_header();
 
                     get_template_part( 'templates/content-none' );
 
-                endif
+                endif;
+
+                    get_template_part( 'templates/components/post-carousel' );
 
                 ?>
 
