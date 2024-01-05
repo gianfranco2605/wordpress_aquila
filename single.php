@@ -47,6 +47,11 @@ get_header();
 
             </div>
 
+            <!-- loadmore shortcode -->
+            <?php
+                echo do_shortcode( '[single_post_listings]' );
+                ?>
+
         </div>
 
     </main>
